@@ -23,7 +23,7 @@ test('Get the modified files, including files in .gitignore but including untrac
   await outputFile(path.resolve(cwd, 'dir/file2.js'), '');
   await outputFile(path.resolve(cwd, 'file3.js'), '');
   // Create .gitignore to ignore file3.js
-  await outputFile(path.resolve(cwd, '.gitignore'), 'file.3.js');
+  await outputFile(path.resolve(cwd, '.gitignore'), 'file3.js');
   // Add files and commit
   await add(['.'], {cwd});
   await commit('Test commit', {cwd});
